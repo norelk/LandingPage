@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/client/main.css">
+    <title>ניהול לידים</title>
+</head>
+<body>
+    <header>
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item dropdown">
+              <a class="nav-link" id="home-page" href="/client/home-page/index.html">יצירת ליד <span class="sr-only">(current)</span></a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link active" id="leads-mang" href="/client/leads-panel-page/leads_panel.html">ניהול לידים</a>
+              </li>
+        </ul>
+    </header>
+
+    <div class="container mt-2">
+        <div class="row mb-2 justify-content-center">
+            <div class="col-xs-12">
+                <h1 class="display-3">ניהול לידים</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 justify-content-center table-responsive">
+                <table class="table table-bordered" id="table">
+                    <thead class="table table-striped text-right"> 
+                      <tr>
+                        <th scope="col">שם מלא</th>
+                        <th scope="col">אימייל</th>
+                        <th scope="col">טלפון</th>
+                        <th scope="col">עיר</th>
+                        <th scope="col">אני מאשר/ת קבלת דיוור ו/או חומר פרסומי ממכבי שירותי בריאות</th>
+                        <th scope="col">אני חבר/ה מכבי</th>
+                        <th scope="col">מחק</th>
+                        <th scope="col">ערוך</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row justify-content-center no-data-row">
+            <div class="col-xs-12">
+                <h4 style="color: black;">אין נתונים</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12">
+                <section id="update-row">
+                    <div class="row justify-content-center">
+                        <div class="col-xs-12">
+                            <div class="input-group mb-2">
+                                <input type="text" aria-label="Full name" class="form-control text-right" id="update-fname-input">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text text-right">שם מלא</span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" aria-label="email" class="form-control text-right" id="update-email-input">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">אימייל</span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" aria-label="phone" class="form-control text-right" id="update-phone-input">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">טלפון</span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" aria-label="city" class="form-control text-right" id="update-city-input">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">עיר</span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control text-right" disabled placeholder="חבר/ה מכבי" aria-label="Text input with checkbox">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                    <input type="checkbox" disabled aria-label="Checkbox for following text input" id="update-check1-input">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2">
+                                <input type="text" disabled class="form-control text-right" placeholder="קבלת דיוור ו/או חומר פרסומי " aria-label="Text input with checkbox">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                    <input type="checkbox" disabled aria-label="Checkbox for following text input" id="update-check2-input">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xs-12 ">
+                                    <button class="btn btn-primary justify-content-center" id="update-row-btn">עדכן</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12">
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="leads.js"></script>
+</body>
+</html>
