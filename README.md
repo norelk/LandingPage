@@ -1,6 +1,6 @@
 # LandingPage
-## in this project i used JS , Node.js, MySQL , express to build this whole app
-## Lead Create, Login and Lead managment
+** in this project i used JS , Node.js, MySQL , express to build this whole app **
+** Lead Create, Login and Lead managment **
 
 ## to access this project you need to do make the following steps :
 ## In your terminal/command line, type npm i
